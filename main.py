@@ -14,7 +14,7 @@ def bot_get_me():
         api_id=22975272,
         api_hash='2dac9dffd65357e3040f2723ba3d1019',
         database_encryption_key="changeme1234",
-	phone=phone
+	    phone=phone
     )
     # you must call login method before others
     tg.login()

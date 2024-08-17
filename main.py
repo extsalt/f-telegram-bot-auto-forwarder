@@ -1,7 +1,7 @@
 from telegram.client import Telegram
 
 
-bot_token='7234382332:AAFfB0sxfJd7twC4RFEMhpT24NxnOlgUBG4'
+bot_token='7325561730:AAGQ0FzwmqTPX5Ww3o3tjWLzl2x7MC3QdSA'
 api_id=22975272
 api_hash='2dac9dffd65357e3040f2723ba3d1019'
 database_encryption_key="changeme1234"

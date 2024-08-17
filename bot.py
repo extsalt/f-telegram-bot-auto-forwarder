@@ -20,6 +20,12 @@ async def setup_outgoing_chat(update: Update, context: ContextTypes.DEFAULT_TYPE
 async def work(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="starting work")
 
+async def login(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text="login")
+
+async def features(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await context.bot.send_message(chat_id=update.effective_chat.id, text="feature")
+
 # async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #     await context.bot.send_message(chat_id=update.effective_chat.id, text="Sorry, I didn't understand that command.")
 
@@ -30,11 +36,15 @@ if __name__ == '__main__':
     setup_incoming_chat_handler = CommandHandler('incoming', setup_incoming_chat)
     setup_outgoing_chat_handler = CommandHandler('outgoing', setup_outgoing_chat)
     work_handler = CommandHandler('work', work)
+    login_handler = CommandHandler('login', login)
+    feature_handler = CommandHandler('feature', features)
 
     application.add_handler(start_handler)
     application.add_handler(setup_incoming_chat_handler)
     application.add_handler(setup_outgoing_chat_handler)
     application.add_handler(work_handler)
+    application.add_handler(login_handler)
+    application.add_handler(feature_handler)
     # unknown_handler = MessageHandler(filters.COMMAND, unknown)
     # application.add_handler(unknown_handler)    
     application.run_polling()

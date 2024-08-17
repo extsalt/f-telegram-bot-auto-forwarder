@@ -1,0 +1,19 @@
+restart - Restart bot
+login - Login to bot
+feature - View all features
+config - View current configuration
+incoming - Setup SOURCE chats
+outgoing - Setup TARGET chats
+delay - Add delay to forwarded messages
+restart_work - Restart setup (stop and work)
+work - Start forwarding
+stop - Stop forwarding
+remove_incoming - Remove incoming chats
+remove_outgoing - Remove outgoing chats
+whitelist - Whitelist some words
+blacklist - blacklist some workds
+remove_whitelist - Remove whitelist
+remove_blacklist - Remove blacklist
+begin_text - Add text to beginning
+end_text - Add text to end
+logout - Logout from bot

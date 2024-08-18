@@ -1,5 +1,6 @@
 import logging
 from telegram import Update
+from telegram.constants import ParseMode
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
 bot_token='7325561730:AAGQ0FzwmqTPX5Ww3o3tjWLzl2x7MC3QdSA'
 logging.basicConfig(
@@ -24,7 +25,8 @@ async def login(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="login")
 
 async def features(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text="feature")
+    html_message = "<b>Auto Message Forwarder </b>Bot for Telegram is a versatile and efficient tool designed to automate the forwarding of messages across different chats, groups, or channels within the Telegram platform. This bot enables users to set up specific rules for forwarding, such as keywords, sender IDs, or message types (text, images, videos, etc.), ensuring that relevant information is instantly shared with the right audience. It supports custom scheduling, filters, and even the ability to modify or format messages before they are forwarded. Ideal for managing large communities, coordinating teams, or keeping multiple groups informed, the Auto Message Forwarder Bot saves time and streamlines communication across the board."
+    await context.bot.send_message(chat_id=update.effective_chat.id, text=html_message, parse_mode=ParseMode.HTML)
 
 # async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #     await context.bot.send_message(chat_id=update.effective_chat.id, text="Sorry, I didn't understand that command.")

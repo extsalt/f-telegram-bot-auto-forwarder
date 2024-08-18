@@ -1,0 +1,15 @@
+[Unit]
+Description=Service that keeps running the echo-server from startup.
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/admin/bot
+WorkingDirectory=/home/admin/bot
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=%n
